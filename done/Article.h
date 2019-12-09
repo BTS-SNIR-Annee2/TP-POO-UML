@@ -1,10 +1,5 @@
-                 
-                 
-
-                   
-                 
-
-using namespace std;
+#ifndef ARTICLE_H
+#define ARTICLE_H
 
 class Article
 {
@@ -19,7 +14,6 @@ class Article
       double getPrix() const;
       void setTitre(string titre);
       void setPrix(double prix);
-      void saisir();
 };
 
-       //ARTICLE_H
+#endif //ARTICLE_H
