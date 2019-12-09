@@ -1,0 +1,18 @@
+               
+               
+
+class Ligne
+{
+   private:
+      long quantite;      
+
+   public:
+      Ligne();
+
+      long getQuantite() const;
+      void setQuantite(long quantite);
+      
+      void saisir();
+};
+
+       //LIGNE_H

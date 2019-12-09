@@ -1,0 +1,25 @@
+                 
+                 
+
+                   
+                 
+
+using namespace std;
+
+class Article
+{
+   private:
+      string titre;
+      double prix;
+
+   public:
+      Article(string titre="", double prix=0.);
+
+      string getTitre() const;
+      double getPrix() const;
+      void setTitre(string titre);
+      void setPrix(double prix);
+      void saisir();
+};
+
+       //ARTICLE_H

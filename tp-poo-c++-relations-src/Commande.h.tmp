@@ -1,0 +1,25 @@
+                  
+                  
+
+                   
+
+using namespace std;
+
+class Commande
+{
+   private:
+      string reference;
+      string date;
+
+   public:
+      Commande(string reference="", string date="");
+
+      string getReference() const;
+      void setReference(string reference);
+      string getDate() const;
+      void setDate(string date);
+
+      void saisir();
+};
+
+       //COMMANDE_H
