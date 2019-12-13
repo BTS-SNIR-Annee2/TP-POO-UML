@@ -4,7 +4,7 @@
 using namespace std;
 
 #include "Commande.h"
-#include "Client.h"// accÃ¨s Ã  la dÃ©claration complÃ¨te de la classe Client
+#include "Client.h"// accès à la déclaration complète de la classe Client
 
 
 
@@ -68,23 +68,25 @@ void Commande::setClient(Client *client)
 
 void Commande::afficher(){
    cout << setfill('-') << setw(80) << "\n";
-   cout << setfill(' ') << setw(50) << "Client: " << client->getNumero();
+   cout << "Ref.: "  << this->reference << setfill(' ') << setw(50)<< "\n";
+   cout << "Client num.: " << client->getNumero() << setfill(' ') << setw(50)<< "\n";
+   cout << "Nom: " << client->getNom() << setfill(' ') << setw(50)<< "\n";
    cout << setfill('-') << setw(80) << "\n";
    cout << setfill(' ') << setw(3) << "Qte";
    cout << "|" << setfill(' ') << setw(50) << "Description";
    cout << "|" << setfill(' ') << setw(8) << "Prix uni";
    cout << "|" << setfill(' ') << setw(15) << "Total\n";
    cout << setfill('-') << setw(80) << "\n";
-   
+
    for(unsigned i=0; i < liste.size();i++)
    {
       liste[i].afficher();
       cout << "\n";
    }
-   
+
    cout << setfill('-') << setw(80) << "\n";
    cout << setfill(' ') << setw(2) << getDate();
    cout << setfill(' ') << setw(53) << getTotal() << " euros" << "\n";
    cout << setfill('-') << setw(80) << "\n";
-   
+
 }
