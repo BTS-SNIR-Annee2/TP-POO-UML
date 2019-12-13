@@ -4,6 +4,10 @@
 using namespace std;
 
 #include "Commande.h"
+#include "Client.h"// accès à la déclaration complète de la classe Client
+
+
+
 
 Commande::Commande(string reference/*=""*/, string date/*=*/)
 {
@@ -52,6 +56,35 @@ int Commande::getNbArticles() const
    return nb;
 }
 
+Client* Commande::getClient() const
+{
+   return client;
+}
+void Commande::setClient(Client *client)
+{
+   this->client = client;
+}
+
+
 void Commande::afficher(){
+   cout << setfill('-') << setw(80) << "\n";
+   cout << setfill(' ') << setw(50) << "Client: " << client->getNumero();
+   cout << setfill('-') << setw(80) << "\n";
+   cout << setfill(' ') << setw(3) << "Qte";
+   cout << "|" << setfill(' ') << setw(50) << "Description";
+   cout << "|" << setfill(' ') << setw(8) << "Prix uni";
+   cout << "|" << setfill(' ') << setw(15) << "Total\n";
+   cout << setfill('-') << setw(80) << "\n";
+   
+   for(unsigned i=0; i < liste.size();i++)
+   {
+      liste[i].afficher();
+      cout << "\n";
+   }
+   
+   cout << setfill('-') << setw(80) << "\n";
+   cout << setfill(' ') << setw(2) << getDate();
+   cout << setfill(' ') << setw(53) << getTotal() << " euros" << "\n";
+   cout << setfill('-') << setw(80) << "\n";
    
 }
